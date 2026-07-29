@@ -1,4 +1,4 @@
-import iscLogo from "./assets/images/ISC_LOGO.PNG";
+import iscLogo from "./assets/images/isc-logo.png";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
