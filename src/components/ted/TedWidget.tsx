@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUp, Check, Loader2, MessageCircle, RotateCcw, UserRound, X } from "lucide-react";
 import { Markdown } from "./markdown";
 import { OPEN_EVENT } from "./openTed";
+import tedIcon from "../../assets/images/aceleradores/ted.png";
 
 type Role = "user" | "assistant";
 interface Msg {
@@ -413,14 +414,14 @@ export default function TedWidget() {
 
 function TedMark({ small }: { small?: boolean }) {
   return (
-    <span
+    <img
+      src={tedIcon}
+      alt=""
       aria-hidden="true"
-      className={`flex shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-700 font-semibold tracking-tight text-white ${
-        small ? "mt-0.5 h-7 w-7 text-[0.6rem]" : "h-9 w-9 text-xs"
-      }`}
-    >
-      TED
-    </span>
+      className={`shrink-0 rounded-full ${small ? "mt-0.5 h-7 w-7" : "h-9 w-9"}`}
+      width={small ? 28 : 36}
+      height={small ? 28 : 36}
+    />
   );
 }
 

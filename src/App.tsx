@@ -1,5 +1,6 @@
 import iscLogo from "./assets/images/isc-logo.png";
 import { motion } from "framer-motion";
+import Aceleradores from "./components/Aceleradores";
 import TedWidget from "./components/ted/TedWidget";
 import { openTed } from "./components/ted/openTed";
 import {
@@ -327,8 +328,9 @@ function App() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-              Soluciones diseñadas para acelerar investigación, automatización,
-              arquitectura, calidad y nuevas experiencias digitales.
+              Soluciones listas para demostrar: asistentes conversacionales,
+              calidad de software automatizada y experiencias digitales con
+              avatares.
             </p>
 
             <a
@@ -340,16 +342,7 @@ function App() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {["TED", "IRIS", "QARA", "HAWK"].map((name) => (
-              <div
-                key={name}
-                className="flex aspect-square items-end rounded-3xl border border-white/10 bg-[#080b18] p-6 text-2xl font-semibold"
-              >
-                {name}
-              </div>
-            ))}
-          </div>
+          <Aceleradores />
         </div>
       </section>
 
