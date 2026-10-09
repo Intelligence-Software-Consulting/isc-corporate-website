@@ -1,5 +1,7 @@
 import iscLogo from "./assets/images/isc-logo.png";
 import { motion } from "framer-motion";
+import TedWidget from "./components/ted/TedWidget";
+import { openTed } from "./components/ted/openTed";
 import {
   ArrowRight,
   BrainCircuit,
@@ -394,13 +396,22 @@ function App() {
             construir.
           </p>
 
-          <a
-            href="mailto:contacto@iscit.com.mx"
-            className="mt-10 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-black transition hover:bg-zinc-200"
-          >
-            Iniciar conversación
-            <ArrowRight size={16} />
-          </a>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <button
+              type="button"
+              onClick={() => openTed()}
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-black transition hover:bg-zinc-200"
+            >
+              Conversar con TED
+              <ArrowRight size={16} />
+            </button>
+            <a
+              href="mailto:contacto@iscit.com.mx"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-sm font-medium text-white transition hover:bg-white/5"
+            >
+              Escríbenos
+            </a>
+          </div>
         </div>
       </section>
 
@@ -410,6 +421,8 @@ function App() {
           <p>La tecnología es el medio, no el fin.</p>
         </div>
       </footer>
+
+      <TedWidget />
     </main>
   );
 }

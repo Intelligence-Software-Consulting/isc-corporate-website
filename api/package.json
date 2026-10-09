@@ -1,0 +1,13 @@
+{
+  "name": "isc-corporate-website-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "API ligera del sitio www.iscit.com.mx: proxy del chat de TED y captación de leads (Azure Static Web Apps, funciones administradas).",
+  "type": "module",
+  "main": "src/functions/*.js",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@azure/data-tables": "^13.3.1",
+    "@azure/functions": "^4.7.0"
+  }
+}
